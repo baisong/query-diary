@@ -14,6 +14,7 @@ For example, using <code>:
     predicate [x1 .. x5] [TIHU time] [TUHI location] [RIHI participants]
     
 where
+
 * predicate (required) := a valid lojban gismu
 * x1 .. x5 (optional) := up to five lojban-parsed sumti (for now, lo + oneword and pro-sumti like mi, do, ra)
 * time (optional) := time (i.e. "li mu", timestamp, "7:00 PM" etc.)
@@ -21,12 +22,15 @@ where
 * participants (optional) := names of others who took part in the experience
 
 input:
+
     mencti mi lo skina "Harry Potter" tu'i zdani ri'i Benny
 
 expanded into grammatical lojban:
+
     mencti mi lo skina po'u la'o .gy. Harry Potter .gy. tu'i lo zdani ri'i la'oi Benny
 
 fully parsed:
+
     bridi: mencti (to mentally consume i.e. read/watch/experience)
     x1: mi (I)
     x2: lo skina po'u la'o .gy. Harry Potter .gy. (the movie "Harry Potter")
