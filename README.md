@@ -88,8 +88,6 @@ basic types are "Animal" (danlu), "Place" (stuzi), and "Thing" (dacti).
     danlu la'oi martin
     
 ### Named Locations (stuzi)
-
-Locations have addresses (judri).
     
     > judri "123 Electric Ave, NY 12345" /zdani
     stuzi lo zdani
