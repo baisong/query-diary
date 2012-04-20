@@ -23,19 +23,22 @@ where
 
 ## Abbreviations
 
-    -- names (la*)
+names (la*)
+
     > "One or multiple word name"
     la'o .gy. A multiple word name .gy.
     
     > 'oneowordname
     la'oi onewordname
 
-    -- descriptions (lo)
+descriptions (lo)
+
     > /judri
     lo judri
 
-    -- lists
-    > a, b, c, d
+lists
+
+    *> a, b, c, d*
     a .e b .e c .e d
 
 abbreviations expand to internally stored 'grammatical' lojban:
