@@ -3,19 +3,19 @@ query-diary
 
 Queryable personal diary using lojban
 
-Store simple predicates in lojban for easy analysis, calculation, reporting, etc.
+Store simple predicates through a prompt in lojban and store your thoughts and feelings... machine readable!
 
 ## Predicates
 
 A lojban sentence (in a "canonical form" of predicate-first) is the base unit of data storage. Three BAI-series cmavo are provided for further info (time, location, participants).
 
-For example, using <code>:
+Canonical form:
 
-    predicate [x1 .. x5] [TIHU time] [TUHI location] [RIHI participants]
+    > predicate [x1 .. x5] [TIHU time] [TUHI location] [RIHI participants]
     
 where
 
-* predicate (required) := a valid lojban gismu
+* predicate (required)<br/>a valid lojban gismu<br/><br/>
 * x1 .. x5 (optional) := up to five lojban-parsed sumti (for now, lo + oneword and pro-sumti like mi, do, ra)
 * time (optional) := time (i.e. "li mu", timestamp, "7:00 PM" etc.)
 * location (optional) := location sumti (i.e. "ckule", latlong coords, map url)
