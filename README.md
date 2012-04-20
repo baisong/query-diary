@@ -21,17 +21,26 @@ where
 * location (optional) := location sumti (i.e. "ckule", latlong coords, map url)
 * participants (optional) := names of others who took part in the experience
 
-## Expanding Names
+## Abbreviations
 
-    "One or multiple word name" => la'o .gy. A multiple word name .gy.
-    'oneowordname => la'oi onewordname
+    -- names (la*)
+    > "One or multiple word name"
+    la'o .gy. A multiple word name .gy.
+    
+    > 'oneowordname
+    la'oi onewordname
 
-input:
+    -- descriptions (lo)
+    > /judri
+    lo judri
 
-    mencti mi lo skina "Harry Potter" tu'i zdani ri'i 'benny
+    -- lists
+    > a, b, c, d
+    a .e b .e c .e d
 
-expanded into grammatical lojban:
+abbreviations expand to internally stored 'grammatical' lojban:
 
+    > mencti mi /skina "Harry Potter" tu'i /zdani ri'i 'benny
     mencti mi lo skina po'u la'o .gy. Harry Potter .gy. tu'i lo zdani ri'i la'oi benny
 
 fully parsed:
@@ -47,7 +56,9 @@ english gloss:
 
     I watched the movie "Harry Potter" at home with Benny.
     
-## Persistent Definitions
+Why not just write your diary in idiomatic english? Because now that it's stored in lojban, it's regular and parseable! Now later on you can ask things like "what were the last 10 occasions I spent with Benny?" or "how long has it been since I saw Harry Potter?" or even more statistically interesting questions about trends and habits!
+
+## Persistent Storage
 
 You can save attributes to things you describe with le/lo or give names to (with la*). For example:
 
@@ -55,21 +66,41 @@ basic types are "Animal" (danlu), "Place" (stuzi), and "Thing" (dacti).
 
 ### Named Animals (danlu)
 
-    remna 'benny
-    // infers danlu la'oi benny lo remna
-    cmene 'benny "Benjamin Butler"
-
-    respa 'martin
-    // infers danlu la'oi martin lo respa
+    > remna 'benny
+    remna la'oi benny
+    -- danlu lo remna
+    danlu la'oi benny
+    
+    > cmene "Benjamin Butler" 'benny
+    cmene la'o .gy. Benjamin Butler .gy. la'oi benny
+    
+    > respa 'martin
     
 ### Named Locations (stuzi)
 
 Locations have addresses (judri).
-
-    judri "123 Electric Ave, NY 12345" lo zdani // infers stuzi lo zdani
-    judri "100 Main Street, NY 12345" lo briju // also infers stuzi lo zdani
+    
+    > judri "123 Electric Ave, NY 12345" /zdani
+    stuzi lo zdani
+    -- stuzi lo se judri
+    judri la'o .gy. 123 Electric Ave, NY 12345 .gy. lo zdani
+    
+    > judri "100 Main Street, NY 12345" /briju
+    judri la'o .gy. 100 Main Street, NY 12345 .gy. lo zdani
+    -- stuzi lo se judri
+    stuzi lo briju
     
 ### Named Things (dacti)
 
-    skami 'newton
-    marce 'bessy
+    > skami 'newton
+    skami la'oi newton
+    -- dacti lo skami
+    dacti la'oi newton
+    
+    > marce 'bessy
+    
+## Recalling Stored Info
+
+    -- recalls stored value
+    > cmene ma 'benny
+    "Benjamin Butler"
