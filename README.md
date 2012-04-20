@@ -11,15 +11,15 @@ A lojban sentence (in a "canonical form" of predicate-first) is the base unit of
 
 Canonical form:
 
-    > predicate [x1 .. x5] [TIHU time] [TUHI location] [RIHI participants]
+    predicate [x1 .. x5] [TIHU time] [TUHI location] [RIHI participants]
     
 where
 
-* predicate (required)<br/>a valid lojban gismu<br/><br/>
-* x1 .. x5 (optional) := up to five lojban-parsed sumti (for now, lo + oneword and pro-sumti like mi, do, ra)
-* time (optional) := time (i.e. "li mu", timestamp, "7:00 PM" etc.)
-* location (optional) := location sumti (i.e. "ckule", latlong coords, map url)
-* participants (optional) := names of others who took part in the experience
+* predicate (required)<br/>a valid lojban gismu
+* x1 .. x5 (optional)<br/>up to five lojban-parsed sumti (for now, lo + oneword and pro-sumti like mi, do, ra)
+* time (optional)<br/>time (i.e. "li mu", "7:00 PM" etc., defaults to current timestamp)
+* location (optional)<br/>location sumti (i.e. "ckule", latlong coords, map url)
+* participants (optional)<br/>names of others who took part in the experience
 
 ## Abbreviations
 
@@ -35,11 +35,16 @@ descriptions (lo)
 
     > /judri
     lo judri
+    
+    > /work
+    na gismu li work li'u
 
 lists
 
-    *> a, b, c, d*
+    > a, b, c, d
     a .e b .e c .e d
+    
+    > 'jan, 'feb, 'mar
 
 abbreviations expand to internally stored 'grammatical' lojban:
 
@@ -78,6 +83,9 @@ basic types are "Animal" (danlu), "Place" (stuzi), and "Thing" (dacti).
     cmene la'o .gy. Benjamin Butler .gy. la'oi benny
     
     > respa 'martin
+    remna la'oi martin
+    -- danlu lo respa
+    danlu la'oi martin
     
 ### Named Locations (stuzi)
 
@@ -101,9 +109,12 @@ Locations have addresses (judri).
     dacti la'oi newton
     
     > marce 'bessy
+    marce la'oi bessy
+    -- dacti lo skami
+    dacti la'oi newton
     
 ## Recalling Stored Info
 
-    -- recalls stored value
     > cmene ma 'benny
+    -- djani
     "Benjamin Butler"
